@@ -1,0 +1,78 @@
+---
+title: "ICA Uni Viz"
+editor: visual
+---
+
+```{r}
+hikes <- read.csv("https://mac-stat.github.io/data/high_peaks.csv")
+library(tidyverse)
+library(dplyr)
+
+head(hikes)
+
+# Use the ggplot function
+ggplot(hikes, aes(x = rating))
+
+# We added geom_bar(), and this in turn created a bar plot
+ggplot(hikes, aes(x = rating)) +
+  geom_bar()
+# We added labs(x = "Rating", y = "Number of hikes"), and this in turned changed the axis labels
+ggplot(hikes, aes(x = rating)) +
+  geom_bar() +
+  labs(x = "Rating", y = "Number of hikes")
+# We added the (fill = "blue"), which made the color of the bars blue.
+ggplot(hikes, aes(x = rating)) +
+  geom_bar(fill = "blue") +
+  labs(x = "Rating", y = "Number of hikes")
+# We added the color = "orange", and this created an orange outline of the bars.
+ggplot(hikes, aes(x = rating)) +
+  geom_bar(color = "orange", fill = "blue") +
+  labs(x = "Rating", y = "Number of hikes")
+# We added the theme_minimal(), and this changed the graph interface.
+ggplot(hikes, aes(x = rating)) +
+  geom_bar(color = "orange", fill = "blue")  +
+  labs(x = "Rating", y = "Number of hikes") +
+  theme_minimal()
+
+ggplot(hikes, aes(x = elevation)) +
+  geom_bar()
+
+# We replaced geom_bar with  geom_histogram() and thus created a histogram
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram()
+
+# We added (color = "white") and as a result the elevation frequencies are outlined in white.
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white") 
+
+# We added fill = "blue" to make the bars blue.
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", fill = "blue") 
+
+# We added labs(x = "Elevation (feet)", y = "Number of hikes") to create accurate axis titles.
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white") +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+
+# We added binwidth = 1000 to increase the width of each bar to 1000 
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 1000) +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+
+# We decreased binwidth to 5 to decrease the width of each bar to 5
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 5) +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+
+# We changed binwidth to 200
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 200) +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+
+ggplot(hikes, aes(x = elevation)) +
+  geom_density(color = "blue", fill = "orange")
+
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 200) +
+  labs(x = "Elevation (feet)", y = "Number of hikes")
+```
