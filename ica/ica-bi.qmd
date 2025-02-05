@@ -3,3 +3,109 @@ title: "Bivariate Viz"
 ---
 
 Use this file for practice with the **bivariate viz** in-class activity.  Refer to the class website for details.
+
+```{r}
+library(tidyverse)
+library(dplyr)
+# Load data
+elections <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
+
+# Check it out
+head(elections)
+```
+
+
+```{r}
+# Exercise 0, part A
+# Guess: 2200
+# Graph
+ggplot(elections, aes(x=winner_20)) +
+  geom_bar()
+# Follow up question: What was the margin of victory in every county?
+
+# Exercise 0, part B
+ggplot(elections, aes(x=repub_pct_20)) +
+  geom_histogram(color = "white")
+
+```
+```{r}
+# Exercise 1
+ggplot(elections, aes(x = repub_pct_16, y = repub_pct_20)) +
+  geom_point()
+```
+```{r}
+#Exercise 2
+# Set up the plotting frame
+# How does this differ than the frame for our histogram of repub_pct_20 alone?
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16))
+
+# Add a layer of points for each county
+# Take note of the geom!
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point()
+
+# Change the shape of the points
+# What happens if you change the shape to another number?
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point(shape = 3)
+
+# YOU TRY: Modify the code to make the points "orange"
+# NOTE: Try to anticipate if "color" or "fill" will be useful here. Then try both.
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point(color = "orange")
+
+# Add a layer that represents each county by the state it's in
+# Take note of the geom and the info it needs to run!
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_text(aes(label = state_abbr), color = "blue")
+```
+```{r}
+# Exercise 4
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point() +
+  geom_smooth(color = "white")
+
+# Part A
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_smooth()
+
+# Part B
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+```{r}
+# Exercise 5
+
+# Scatterplot of repub_pct_20 vs median_rent
+ggplot(elections, aes(x = median_rent, y = repub_pct_20)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+
+# Scatterplot of repub_pct_20 vs median_age
+ggplot(elections, aes(x = median_age, y = repub_pct_20)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+# Median rent a better predictor, but in a negative direction
+```
+```{r}
+ggplot(elections, aes(y = repub_pct_20, x = historical)) +
+  geom_point()
+# The scatterplot is not an effective visualization in this case because historical is a categorical variable, not quantitative
+```
+```{r}
+# Side-by-side violin plots
+ggplot(elections, aes(y = repub_pct_20, x = historical)) +
+  geom_violin()
+
+# Side-by-side boxplots (defined below)
+ggplot(elections, aes(y = repub_pct_20, x = historical)) +
+  geom_boxplot()
+```
+```{r}
+# Exercise 8/9
+
+```
+
