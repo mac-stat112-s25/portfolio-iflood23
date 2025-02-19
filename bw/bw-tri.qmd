@@ -3,3 +3,35 @@ title: "Trivariate Viz"
 ---
 
 Use this file to generate a professional looking **trivariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(fivethirtyeight)
+library(mosaic)
+data("Birthdays")
+daily_births <- Birthdays |> 
+  group_by(date) |> 
+  summarize(births = sum(births)) |> 
+  mutate(year = year(date), 
+         month = month(date, label = TRUE),
+         day_of_month = mday(date),
+         day_of_week = wday(date, label = TRUE))
+```
+
+
+```{r}
+#| fig-cap: "Births by Weekday in the United States: 1969-1988"
+#| fig-alt: "This graph displays the number of births on each weekday from the year 1969 to the year 1988. The data is separated by day."
+
+ggplot(daily_births, aes(x = date, y = births, color = day_of_week)) +
+  geom_point(alpha = 0.75) +
+  facet_wrap(~day_of_week) +
+  labs(title = "Births by Weekday in the United States: 1969-1988", x = "Year", y = "Total Number of Births By Day", caption = "Created by Izzy Flood. February 2025. 
+       Source: RStudio", color = "Day of Week") +
+  scale_color_viridis_d()
+
+
+```
+
