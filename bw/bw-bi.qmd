@@ -3,3 +3,26 @@ title: "Bivariate Viz"
 ---
 
 Use this file to generate a professional looking **bivariate** visualization.  The visualization will not perfect the first time but you are expected to improve it throughout the semester especially after covering advanced topics such as effective viz.
+
+
+```{r}
+library(tidyverse)
+library(dplyr)
+
+elections <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
+```
+
+
+```{r}
+#| fig-cap: "Per Capita Income and Republican Vote Percentages by US County: 2020 Election"
+#| fig-alt: "This graph plots every US county's percentage of republican voters in the 2020 general election in comparison to per capita income. Addittionally, the graph displays a linear regression model generalized to all datapoints. Looking at the graph, we can say that there is a negative relationship between per capita income and Republican vote percentages "
+
+ggplot(elections, aes(x = per_capita_income, y = repub_pct_20)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  scale_color_viridis_d() +
+  labs(title = "Per Capita Income and Republican Vote Percentages by US County: 2020 Election", x = "Per Capita Income by US County in USD", y = "Republican Vote Percentage in the 2020 General Election", caption = "Created by Izzy Flood. 
+       February 2025. Source: Github")
+
+```
+
