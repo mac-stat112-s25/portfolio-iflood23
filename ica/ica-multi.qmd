@@ -3,3 +3,80 @@ title: "Mulivariate Viz"
 ---
 
 Use this file for practice with the **mulivariate viz** in-class activity.  Refer to the class website for details.
+
+```{r}
+# Import and check out data
+education <- read.csv("https://mac-stat.github.io/data/sat.csv")
+head(education)
+
+library(tidyverse)
+library(dplyr)
+```
+```{r}
+# Exercise 1
+# part a
+ggplot(education, aes(x = sat)) +
+  geom_histogram() 
+  
+
+# part b
+### There is a wide state to state range for sat scores, mostly skewed towards lower scores
+
+```
+```{r}
+# Exercise 2, part a
+# Construct a plot of sat vs expend
+ggplot(education, aes(x = expend, y = sat)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+ggplot(education, aes(x = salary, y = sat)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+# part b
+
+##There is a relatively negative relationship between sat scores and spending
+  
+
+```
+```{r}
+# Exercise 3
+ggplot(education, aes(x = expend, y = sat, color = salary)) +
+  geom_point() +
+   geom_smooth(method = "lm")
+```
+```{r}
+# Exercise 4
+ggplot(education, aes(y = sat, x = salary, color = cut(expend, 2))) + 
+  geom_point() + 
+  geom_smooth(se = FALSE, method = "lm")
+# Analysis
+### States with lower salaries and expenditures have higher SAT scores
+```
+```{r}
+# Exercise 5, part a
+ggplot(education, aes(x = fracCat)) +
+  geom_bar()
+
+# part b
+ggplot(education, aes(x = fracCat, y = sat)) +
+  geom_boxplot()
+ggplot(education, aes(x  = sat, fill = fracCat)) +
+  geom_density()
+ggplot(education, aes(x = sat, fill = fracCat)) +
+  geom_histogram(color = "white") +
+  scale_fill_manual(values = c("blue", "purple", "red"))
+
+# part c
+ggplot(education, aes(y = sat, x = expend, color = fracCat)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+ggplot(education, aes(y = sat, x = expend, color = fracCat)) + 
+  geom_line() 
+
+# part d
+
+
+```
+

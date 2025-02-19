@@ -3,3 +3,143 @@ title: "Spatial Viz"
 ---
 
 Use this file for practice with the **spatial viz** in-class activity.  Refer to the class website for details.
+
+
+```{r}
+install.packages(c("sf", "maps", "RColorBrewer", "gplots", "socviz", "leaflet", "devtools"))
+devtools::install_github("ropensci/rnaturalearthhires")
+library(tidyverse)
+library(dplyr)
+```
+```{r}
+# Exercise 1
+
+fave_places <- read.csv("https://hash-mac.github.io/stat112site-s25/data/our_fave_places.csv")
+
+# Check it out
+head(fave_places)
+
+# Load the leaflet package
+library(leaflet)
+
+# Just a plotting frame
+leaflet(data = fave_places)
+
+# Now what do we have?
+leaflet(data = fave_places) |> 
+  addTiles()
+
+# longitude and latitude refer to the variables in our data
+leaflet(data = fave_places) |> 
+  addTiles() |> 
+  addMarkers(lng = ~longitude, lat = ~latitude)
+```
+```{r}
+#Exercise 2
+
+# Load package needed to change color
+library(gplots)
+
+# We can add colored circles instead of markers at each location
+leaflet(data = fave_places) |> 
+  addTiles() |> 
+  addCircles(color = col2hex("red"))
+
+# We can change the background
+# Mark locations with yellow dots
+# And connect the dots, in their order in the dataset, with green lines
+# (These green lines don't mean anything here, but would if this were somebody's travel path!)
+leaflet(data = fave_places) |>
+  addProviderTiles("USGS") |>
+  addCircles(weight = 10, opacity = 1, color = col2hex("yellow")) |>
+  addPolylines(
+    lng = ~longitude,
+    lat = ~latitude,
+    color = col2hex("green")
+  )
+
+
+```
+```{r}
+# Exercise 3
+
+# Import starbucks location data
+starbucks <- read.csv("https://mac-stat.github.io/data/starbucks.csv")
+
+# Don't worry about the syntax
+starbucks_mn <- starbucks |>   
+  filter(Country == "US", State.Province == "MN")
+
+leaflet(data = starbucks_mn) |> 
+  addTiles() |> 
+  addMarkers(lng = ~Longitude, lat = ~Latitude)
+
+# Scatterplot
+ggplot(starbucks, aes(x = Longitude, y = Latitude)) +
+  geom_point(alpha = 0.2, size = 0.2)
+
+
+```
+
+```{r}
+# Exercise 4, part a
+# Load the package
+library(rnaturalearth)
+
+# Get info about country boundaries across the world
+# in a "sf" or simple feature format
+world_boundaries <- ne_countries(returnclass = "sf")
+
+# part b
+ggplot(world_boundaries) + 
+  geom_sf()
+
+# Load package needed to change map theme
+library(mosaic)
+
+# Add a point for each Starbucks
+# NOTE: The Starbucks info is in our starbucks data, not world_boundaries
+# How does this change how we use geom_point?!
+ggplot(world_boundaries) + 
+  geom_sf() + 
+  geom_point(
+    data = starbucks,
+    aes(x = Longitude, y = Latitude),
+    alpha = 0.3, size = 0.2, color = "darkgreen"
+  ) +
+  theme_map()
+
+```
+```{r}
+# Exercise 5, part a
+# We'll learn this syntax soon! Don't worry about it now.
+starbucks_cma <- starbucks |> 
+  filter(Country %in% c('CA', 'MX', 'US'))
+
+cma_boundaries <- ne_states(
+  country = c("canada", "mexico", "united states of america"),
+  returnclass = "sf")
+
+# part b
+# Just the boundaries
+ggplot(cma_boundaries) + 
+  geom_sf()
+
+# Add the points
+# And zoom in
+ggplot(cma_boundaries) + 
+  geom_sf() + 
+  geom_point(
+    data = starbucks_cma,
+    aes(x = Longitude, y = Latitude),
+    alpha = 0.3,
+    size = 0.2,
+    color = "darkgreen"
+  ) +
+  coord_sf(xlim = c(-179.14, -50)) +
+  theme_map()
+
+```
+
+
+

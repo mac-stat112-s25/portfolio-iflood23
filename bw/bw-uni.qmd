@@ -3,3 +3,24 @@ title: "Univariate Viz"
 ---
 
 Use this file to generate a professional looking **univariate** visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+
+```{r}
+hikes <- read.csv("https://mac-stat.github.io/data/high_peaks.csv")
+library(tidyverse)
+library(dplyr)
+```
+
+
+```{r}
+#| fig-cap: "The Varied Elevation of the Adirondack's 46 Highest Peaks"
+#| fig-alt: "This graph plots the elevation of the Adirondack's 46 highest peaks as well as the frequency of each elevation"
+
+ggplot(hikes, aes(x = elevation)) +
+  geom_histogram(color = "white", binwidth = 100) +
+  labs(title = "The Varied Elevation of the Adirondack's 46 Highest Peaks", x = "Elevation in Feet", y = "Number of Trails", caption = "Izzy Flood. February 2025. 
+       Source: adirondack.net")
+```
+
+
+
