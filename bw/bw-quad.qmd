@@ -3,3 +3,27 @@ title: "Quadvariate Viz"
 ---
 
 Use this file to generate a professional looking **quadvariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+
+```{r}
+library(tidyverse)
+library(dplyr)
+
+elections <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
+
+```
+
+```{r}
+#| fig-cap: "The Relationship Between Republican Support, Income, Age, and District Voting History"
+#| fig-alt: "This graph plots every US county's percentage of republican voters in the 2020 general election in comparison to per capita income, the district's typical behavior, and the median age within the district. Looking at the graph, we can see that for all age groups, there is a negative relationship between per capita income and republican percentage. This relationship is stronger for voters in the age range of 49.7-63.8 than it is for the age range of 21.6-35.7, and it is strongest for the age range of 35.7-49.7. Additionally, the graph indicates that republican support tends to be lower in districts where the median age is lower."
+
+
+ggplot(elections, aes(y = repub_pct_20, x = per_capita_income, color = cut(median_age, 3))) + 
+  geom_point(aes(shape = historical)) + 
+  geom_smooth(se = FALSE, method = "lm") +
+  scale_color_viridis_d(alpha = 0.75) +
+  theme_classic() +
+  labs(x = "Per Capita Income in USD", y = "Republican Percentage in the 2020 General Election", caption = "Created by Izzy Flood. 
+       February 2025. Source: github", title = "The Relationship Between Republican Support, Income, Age, and District Voting History", color = "Median Age", shape = "Historical District Trend")
+```
+
