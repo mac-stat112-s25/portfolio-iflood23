@@ -6,11 +6,10 @@ Use this file for practice with the **spatial viz** in-class activity.  Refer to
 
 
 ```{r}
-install.packages(c("sf", "maps", "RColorBrewer", "gplots", "socviz", "leaflet", "devtools"))
-devtools::install_github("ropensci/rnaturalearthhires")
 library(tidyverse)
 library(dplyr)
 ```
+
 ```{r}
 # Exercise 1
 
