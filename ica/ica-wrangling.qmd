@@ -1,0 +1,70 @@
+---
+title: "DS 112. Wrangling"
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+elections <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
+
+# Exercise 1
+# Define elections_small
+elections_small <- elections |>
+  select(state_name, county_name, total_votes_20, repub_pct_20, dem_pct_20, total_votes_16, dem_pct_16)
+
+# Check out the first 6 rows to confirm your code did what you think it did!
+head(elections_small)
+
+```
+
+```{r}
+# Exercise 2
+
+# Keep only data on counties in Hawaii
+elections_small |>
+  filter(state_name == "Hawaii")
+ 
+# What does this do?
+elections_small |> 
+  filter(state_name %in% c("Hawaii", "Delaware"))
+# Above code gives us Hawaii and Delaware counties, a version of == but for multiple states
+
+# Keep only data on counties where the Republican got MORE THAN 93.97% of the vote in 2020
+elections_small |>
+  filter(repub_pct_20 > 93.97)
+# THINK: What variable is relevant here?
+
+# Keep only data on counties where the Republican got AT LEAST 93.97% of the vote in 2020
+elections_small |>
+  filter(repub_pct_20 >= 93.97)
+# This should have 1 more row (observation) than your answer above
+
+# Keep only data on counties in Texas where the Democrat got more than 65% of the vote in 2020
+# Do this 2 ways.
+# Method 1: 2 filters with 1 condition each
+elections_small |> 
+  filter(state_name == "Texas") |> 
+  filter(dem_pct_20 > 65.00)
+
+# Method 2: 1 filter with 2 conditions
+elections_small |> 
+  filter(state_name == "Texas", dem_pct_20 > 65.00)
+```
+
+```{r}
+# Exercise 3
+
+# Arrange the counties in elections_small from lowest to highest percentage of 2020 Republican support
+# Print out just the first 6 rows
+ elections_small |> 
+   arrange(repub_pct_20) |> 
+   head()
+ 
+ # Arrange the counties in elections_small from highest to lowest percentage of 2020 Republican support
+# Print out just the first 6 rows
+elections_small |> 
+  arrange(desc(repub_pct_20)) |> 
+  head()
+
+
+```

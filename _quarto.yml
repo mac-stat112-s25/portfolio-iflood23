@@ -13,7 +13,7 @@ book:
   
   
   sidebar:
-    title: "Your Name Here"
+    title: "Izzy Flood"
     collapse-level: 2
     style: "docked"
     pinned: true
@@ -33,10 +33,11 @@ book:
 
     - part: "In-class Activities"
       chapters: 
-      - ica/ica-uni.qmd
+      - ica/IcaUniViz.qmd
       - ica/ica-bi.qmd
       - ica/ica-multi.qmd
       - ica/ica-spatial.qmd
+      - ica/ica-wrangling.qmd
 
 format:
   html:
