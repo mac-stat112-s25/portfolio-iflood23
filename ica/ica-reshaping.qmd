@@ -1,0 +1,120 @@
+---
+title: "ica-reshaping"
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+```{r}
+# Exercise 1
+# Consider data on a sleep study in which subjects received only 3 hours of sleep per night. Each day, their reaction time to a stimulus (in ms) was recorded.
+
+sleep_wide <- read.csv("https://mac-stat.github.io/data/sleep_wide.csv")
+
+head(sleep_wide)
+
+# part a
+# What are the units of observation in sleep_wide?
+# the units of observation are the different subjects
+
+# part b
+# Suppose I ask you to plot each subject’s reaction time (y-axis) vs the number of days of sleep restriction (x-axis). “Sketch” out in words what the first few rows of the data need to look like in order to do this. It might help to think about what you’d need to complete the plotting frame:
+
+# ggplot(___, aes(y = ___, x = ___, color = ___))
+
+# part c
+# How can you obtain the dataset you sketched in part b?
+#    pivot_longer()
+
+
+
+```
+
+```{r}
+# exercise 2
+# To plot reaction time by day for each subject, we need to reshape the data into a long format where each row represents a subject/day combination. Specifically, we want a dataset with 3 columns and a first few rows
+
+# part a
+# Use pivot_longer() to create the long-format dataset. Show the first 3 lines (head(3)), which should be similar to those above. Follow-up: Thinking forward to plotting reaction time vs day for each subject, what would you like to fix / change about this dataset?
+
+# For cols, try 2 appproaches: using - and starts_with
+sleep_wide |> 
+  pivot_longer(cols = -Subject, names_to = "day", values_to = "reaction time")
+
+# part b
+
+sleep_long <- sleep_wide |>
+  pivot_longer(cols = -Subject,
+               names_to = "day",
+               names_prefix = "day_",
+               values_to = "reaction_time")
+head(sleep_long)
+
+# part c
+# Using sleep_long, construct a line plot of reaction time vs day for each subject. This will look goofy no matter what you do. Why? HINT: look back at head(sleep_long). What class or type of variables are Subject and day? What do we want them to be?
+
+library(ggplot2)
+
+ggplot(sleep_long, aes(y = reaction_time, x = day, color = Subject)) +
+  geom_line()
+
+
+```
+
+```{r}
+# Exercise 3
+# Let’s finalize sleep_long by mutating the Subject variable to be a factor (categorical) and the day variable to be numeric (quantitative). Take note of the mutate() code! You’ll use this type of code a lot.
+
+sleep_long <- sleep_wide |>
+  pivot_longer(cols = -Subject,
+               names_to = "day",
+               names_prefix = "day_",
+               values_to = "reaction_time") |> 
+  mutate(Subject = as.factor(Subject), day = as.numeric(day))
+
+# Check it out
+# Same data, different class
+head(sleep_long)
+
+# part a
+
+# Make a line plot of reaction time by day for each subject
+# Put these all on the same frame
+ggplot(sleep_long, aes(x = day, y = reaction_time, color = Subject)) +
+  geom_line()
+
+# Make a line plot of reaction time by day for each subject
+# Put these all on separate frames (one per subject)
+ggplot(sleep_long, aes(x = day, y = reaction_time, color = Subject)) +
+  geom_line() +
+  facet_wrap(~Subject)
+
+# part b
+# Summarize what you learned from the plots. For example:
+# What’s the general relationship between reaction time and sleep?
+# Is this the same for everybody? What differs?
+
+
+```
+
+```{r}
+# Exercise 4
+# Make the data wide again, with each day becoming its own column.
+
+# part a
+# Adjust the code below. What don’t you like about the column labels?
+
+sleep_long |>
+  pivot_wider(names_from = day, values_from = reaction_time) |> 
+  head()
+
+# part b
+# Using your intuition, adjust your code from part a to name the reaction time columns “day_0”, “day_1”, etc.
+
+sleep_long |>
+  pivot_wider(names_from = day, values_from = reaction_time, names_prefix = "day_")|>   head()
+
+```

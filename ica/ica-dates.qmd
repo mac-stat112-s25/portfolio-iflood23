@@ -1,0 +1,138 @@
+---
+title: "ica-dates"
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+library(dplyr)
+penguins <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv')
+
+
+```
+
+```{r}
+# Exercise 1, part a
+
+# Create a dataset with just Adelie and Chinstrap using %in%
+# Pipe this into `count(species)` to confirm that you only have these 2 species
+penguins |> 
+   filter(species %in% c("Adelie", "Chinstrap")) |> 
+   count(species)
+
+# Create a dataset with just Adelie and Chinstrap using !=
+# Pipe this into `count(species)` to confirm that you only have these 2 species
+penguins |> 
+   filter(species != "Gentoo") |> 
+   count(species)
+
+# Part b
+head(penguins)
+
+penguins |> 
+  summarize(sum(is.na(body_mass_g)))
+
+penguins_w_body_mass <- penguins |> 
+  filter(!is.na(body_mass_g))
+
+# Compare the number of penguins in this vs the original data
+nrow(penguins_w_body_mass)
+nrow(penguins)
+
+# count number of cases without a sex assignment
+penguins_w_body_mass |> 
+  summarize(sum(is.na(sex)))
+
+# Get rid of every case with a missing value
+penguins_complete <- penguins |> 
+  na.omit()
+
+nrow(penguins_complete)
+nrow(penguins)
+
+# part c
+# We only need na.omit when we are analyzing every variable of the dataset. We do not want to get rid of important data when a value is missing on an unimportant variable.
+
+
+```
+
+```{r}
+# Exercise 2
+
+# First: recall the variable names
+names(penguins)
+
+# Use a shortcut to keep everything but the year and island variables
+
+penguins |>
+  select(-year, -island)
+
+# Use a shortcut to keep only species and the penguin characteristics measured in mm
+
+penguins |>
+  select(species, bill_length_mm, bill_depth_mm, flipper_length_mm)
+
+# Use a shortcut to keep only species and bill-related measurements
+
+penguins |>
+  select(species, bill_length_mm, bill_depth_mm)
+
+# Use a shortcut to keep only species and the length-related characteristics
+
+penguins |>
+  select(species, bill_length_mm)
+
+```
+
+```{r}
+# Exercise 3
+
+# Change this code to sort the penguins by species, and then island name
+# NOTE: The first row should be an Adelie penguin living on Biscoe island
+penguins |> 
+  arrange(species, island)
+
+# Change this code to count the number of male/female penguins observed for each species
+penguins |> 
+  count(species, sex)
+
+# Change this code to calculate the average body mass by species and sex
+penguins |> 
+  group_by(species, sex) |> 
+  summarize(mean = mean(body_mass_g, na.rm = TRUE))
+
+```
+
+```{r}
+# Exercise 4
+
+# Get today's date
+as.Date(today())
+
+# Let's store this as "today" so we can work with it below
+today <- as.Date(today())
+# Check out the class of this object
+class(today)
+
+# Gives us the year
+year(today)
+
+# Gives us the month in integer value 1-12
+month(today)
+
+# Gives us the month in English
+month(today, label = TRUE)
+
+# Gives us the week in the year
+week(today)
+
+today >= ymd("2024-02-14")
+# today is after or the same day as 2-14-2024, so it prints true
+
+today < ymd("2024-02-14")
+# Today is not before 2-14-2024, so it prints false
+```
+
+```{r}
+
+```
