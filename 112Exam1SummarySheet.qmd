@@ -1,0 +1,6 @@
+---
+title: "Summary Sheet"
+editor: visual
+---
+
+![](images/Stat 112 Exam 1 Cheat Sheet-1.pdf)
