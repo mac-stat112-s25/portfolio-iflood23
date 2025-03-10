@@ -39,6 +39,7 @@ book:
       - ica/ica-spatial.qmd
       - ica/ica-wrangling.qmd
       - ica/ica-dates.qmd
+      - ica/ica-reshaping.qmd
 
 format:
   html:
