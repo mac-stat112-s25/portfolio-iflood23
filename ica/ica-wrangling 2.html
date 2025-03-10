@@ -4,9 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="author" content="Izzy Flood">
-<meta name="dcterms.date" content="2025-03-10">
-<title>COMP/STAT112 Notebook</title>
+<title>10&nbsp; DS 112. Wrangling – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -55,24 +53,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./bw/bw-uni.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../ica/ica-dates.html" rel="next">
+<link href="../ica/ica-spatial.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -98,9 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="site_libs/wordcloud2-0.0.1/wordcloud.css" rel="stylesheet">
-<script src="site_libs/wordcloud2-0.0.1/wordcloud2-all.js"></script><script src="site_libs/wordcloud2-0.0.1/hover.js"></script><script src="site_libs/wordcloud2-binding-0.2.1/wordcloud2.js"></script><link rel="stylesheet" href="style/custom.css">
+}</script><link rel="stylesheet" href="../style/custom.css">
 </head>
 <body class="nav-sidebar docked">
 
@@ -109,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-wrangling.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">DS 112. Wrangling</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -120,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Izzy Flood</a> 
+      <a href="../">Izzy Flood</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -140,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome</span></a>
   </div>
 </li>
@@ -155,31 +152,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bw/bw-uni.html" class="sidebar-item-text sidebar-link">
+  <a href="../bw/bw-uni.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bw/bw-bi.html" class="sidebar-item-text sidebar-link">
+  <a href="../bw/bw-bi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bw/bw-tri.html" class="sidebar-item-text sidebar-link">
+  <a href="../bw/bw-tri.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bw/bw-quad.html" class="sidebar-item-text sidebar-link">
+  <a href="../bw/bw-quad.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bw/bw-spatial.html" class="sidebar-item-text sidebar-link">
+  <a href="../bw/bw-spatial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
   </div>
 </li>
@@ -196,44 +193,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ica/IcaUniViz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IcaUniViz.html</span></span></a>
+  <a href="../ica/IcaUniViz.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ICA Uni Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ica/ica-bi.html" class="sidebar-item-text sidebar-link">
+  <a href="../ica/ica-bi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ica/ica-multi.html" class="sidebar-item-text sidebar-link">
+  <a href="../ica/ica-multi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Mulivariate Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ica/ica-spatial.html" class="sidebar-item-text sidebar-link">
+  <a href="../ica/ica-spatial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ica/ica-wrangling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">ica-wrangling.html</span></span></a>
+  <a href="../ica/ica-wrangling.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">DS 112. Wrangling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ica/ica-dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ica-dates.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./ica/ica-reshaping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ica-reshaping</span></span></a>
+  <a href="../ica/ica-dates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ica-dates</span></span></a>
   </div>
 </li>
       </ul>
@@ -242,54 +233,227 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-<li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  </ul></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">COMP/STAT112 Notebook</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-wrangling.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">DS 112. Wrangling</span></a></li></ol></nav><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">
+<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">DS 112. Wrangling</span>
+</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Izzy Flood </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 10, 2025</p>
-    </div>
-  </div>
   
     
   </div>
   
 
 
-</header><section id="welcome" class="level1 unnumbered"><h1 class="unnumbered">Welcome</h1>
-<p>Welcome to my online portfolio for COMP/STAT112 course taken at <a href="https://www.macalester.edu/">Macalester College</a>. Please, use the side bar on the left for navigation.</p>
+</header><div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>elections <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/election_2020_county.csv"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># Exercise 1</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># Define elections_small</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>elections_small <span class="ot">&lt;-</span> elections <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="fu">select</span>(state_name, county_name, total_votes_20, repub_pct_20, dem_pct_20, total_votes_16, dem_pct_16)</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co"># Check out the first 6 rows to confirm your code did what you think it did!</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="fu">head</span>(elections_small)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name    county_name total_votes_20 repub_pct_20 dem_pct_20
+1    Alabama Autauga County          27770        71.44      27.02
+2    Alabama Baldwin County         109679        76.17      22.41
+3    Alabama Barbour County          10518        53.45      45.79
+4    Alabama    Bibb County           9595        78.43      20.70
+5    Alabama  Blount County          27588        89.57       9.57
+6    Alabama Bullock County           4613        24.84      74.70
+  total_votes_16 dem_pct_16
+1          24661      23.96
+2          94090      19.57
+3          10390      46.66
+4           8748      21.42
+5          25384       8.47
+6           4701      75.09</code></pre>
+</div>
+</div>
 <div class="cell">
-<div class="cell-output-display">
-<div class="wordcloud2 html-widget html-fill-item" id="htmlwidget-5c21391d73902b81013a" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-5c21391d73902b81013a">{"x":{"word":["welcome","to","comp","stat","112","mac","st paul"],"freq":[10,2,8,8,8,6,6],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":18,"backgroundColor":"white","gridSize":0,"minRotation":-0.7853981633974483,"maxRotation":0.7853981633974483,"shuffle":true,"rotateRatio":0.4,"shape":"cardioid","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Exercise 2</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Keep only data on counties in Hawaii</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Hawaii"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20
+1     Hawaii   Hawaii County          87814        30.63      66.88
+2     Hawaii Honolulu County         382114        35.66      62.51
+3     Hawaii    Kauai County          33497        34.58      63.36
+4     Hawaii     Maui County          71044        31.14      66.59
+  total_votes_16 dem_pct_16
+1          64865      63.61
+2         285683      61.48
+3          26335      62.49
+4          51942      64.45</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># What does this do?</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">filter</span>(state_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Hawaii"</span>, <span class="st">"Delaware"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name       county_name total_votes_20 repub_pct_20 dem_pct_20
+1   Delaware       Kent County          87025        47.12      51.19
+2   Delaware New Castle County         287633        30.72      67.81
+3   Delaware     Sussex County         129352        55.07      43.82
+4     Hawaii     Hawaii County          87814        30.63      66.88
+5     Hawaii   Honolulu County         382114        35.66      62.51
+6     Hawaii      Kauai County          33497        34.58      63.36
+7     Hawaii       Maui County          71044        31.14      66.59
+  total_votes_16 dem_pct_16
+1          74253      44.91
+2         261468      62.30
+3         105814      37.17
+4          64865      63.61
+5         285683      61.48
+6          26335      62.49
+7          51942      64.45</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Above code gives us Hawaii and Delaware counties, a version of == but for multiple states</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co"># Keep only data on counties where the Republican got MORE THAN 93.97% of the vote in 2020</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;</span> <span class="fl">93.97</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name    county_name total_votes_20 repub_pct_20 dem_pct_20
+1      Texas  Borden County            416        95.43       3.85
+2      Texas    King County            159        94.97       5.03
+3      Texas Roberts County            550        96.18       3.09
+  total_votes_16 dem_pct_16
+1            365       8.49
+2            159       3.14
+3            550       3.64</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># THINK: What variable is relevant here?</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co"># Keep only data on counties where the Republican got AT LEAST 93.97% of the vote in 2020</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;=</span> <span class="fl">93.97</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20
+1    Montana Garfield County            813        93.97       5.04
+2      Texas   Borden County            416        95.43       3.85
+3      Texas     King County            159        94.97       5.03
+4      Texas  Roberts County            550        96.18       3.09
+  total_votes_16 dem_pct_16
+1            715       4.76
+2            365       8.49
+3            159       3.14
+4            550       3.64</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># This should have 1 more row (observation) than your answer above</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co"># Keep only data on counties in Texas where the Democrat got more than 65% of the vote in 2020</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="co"># Do this 2 ways.</span></span>
+<span id="cb13-5"><a href="#cb13-5"></a><span class="co"># Method 1: 2 filters with 1 condition each</span></span>
+<span id="cb13-6"><a href="#cb13-6"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb13-7"><a href="#cb13-7"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-8"><a href="#cb13-8"></a>  <span class="fu">filter</span>(dem_pct_20 <span class="sc">&gt;</span> <span class="fl">65.00</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20
+1      Texas  El Paso County         267215        31.56      66.66
+2      Texas Presidio County           2217        32.52      65.99
+3      Texas   Travis County         610349        26.43      71.41
+4      Texas   Zavala County           4379        34.03      65.40
+  total_votes_16 dem_pct_16
+1         210458      69.14
+2           2203      66.18
+3         462511      66.26
+4           3390      77.67</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Method 2: 1 filter with 2 conditions</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>, dem_pct_20 <span class="sc">&gt;</span> <span class="fl">65.00</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20
+1      Texas  El Paso County         267215        31.56      66.66
+2      Texas Presidio County           2217        32.52      65.99
+3      Texas   Travis County         610349        26.43      71.41
+4      Texas   Zavala County           4379        34.03      65.40
+  total_votes_16 dem_pct_16
+1         210458      69.14
+2           2203      66.18
+3         462511      66.26
+4           3390      77.67</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Exercise 3</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="co"># Arrange the counties in elections_small from lowest to highest percentage of 2020 Republican support</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a><span class="co"># Print out just the first 6 rows</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a> elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb17-6"><a href="#cb17-6"></a>   <span class="fu">arrange</span>(repub_pct_20) <span class="sc">|&gt;</span> </span>
+<span id="cb17-7"><a href="#cb17-7"></a>   <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            state_name            county_name total_votes_20 repub_pct_20
+1 District of Columbia   District of Columbia         344356         5.40
+2             Maryland Prince George's County         424855         8.73
+3             Maryland         Baltimore city         237461        10.69
+4             Virginia        Petersburg city          14118        11.22
+5             New York        New York County         694904        12.26
+6           California   San Francisco County         443458        12.72
+  dem_pct_20 total_votes_16 dem_pct_16
+1      92.15         280272      92.85
+2      89.26         351091      89.33
+3      87.28         208980      85.44
+4      87.75          13717      87.52
+5      86.78         591368      87.17
+6      85.27         365295      85.53</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a> <span class="co"># Arrange the counties in elections_small from highest to lowest percentage of 2020 Republican support</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="co"># Print out just the first 6 rows</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(repub_pct_20)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-5"><a href="#cb19-5"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  state_name      county_name total_votes_20 repub_pct_20 dem_pct_20
+1      Texas   Roberts County            550        96.18       3.09
+2      Texas    Borden County            416        95.43       3.85
+3      Texas      King County            159        94.97       5.03
+4    Montana  Garfield County            813        93.97       5.04
+5      Texas Glasscock County            653        93.57       5.97
+6   Nebraska     Grant County            402        93.28       4.98
+  total_votes_16 dem_pct_16
+1            550       3.64
+2            365       8.49
+3            159       3.14
+4            715       4.76
+5            602       5.65
+6            394       5.08</code></pre>
 </div>
 </div>
 
 
 <!-- -->
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -909,51 +1073,86 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="../ica/ica-spatial.html" class="pagination-link" aria-label="Spatial Viz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./bw/bw-uni.html" class="pagination-link" aria-label="Univariate Viz">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ica/ica-dates.html" class="pagination-link" aria-label="ica-dates">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ica-dates</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu"># Welcome {.unnumbered}</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>Welcome to my online portfolio for COMP/STAT112 course taken at <span class="co">[</span><span class="ot">Macalester College</span><span class="co">](https://www.macalester.edu/)</span>.  Please, use the side bar on the left for navigation.</span>
-<span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="in">```{r}</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#| output: false</span></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"wordcloud2"</span>, <span class="st">"here"</span>)</span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="in">```</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="in">```{r}</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co">#| output: false</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="fu">install.packages</span>(<span class="fu">setdiff</span>(packages, <span class="fu">rownames</span>(<span class="fu">installed.packages</span>())), <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span>
-<span id="cb1-21"><a href="#cb1-21"></a><span class="in">```</span></span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="in">```{r}</span></span>
-<span id="cb1-26"><a href="#cb1-26"></a><span class="co">#| output: false</span></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a><span class="co">#| message: false</span></span>
-<span id="cb1-29"><a href="#cb1-29"></a></span>
-<span id="cb1-30"><a href="#cb1-30"></a><span class="fu">lapply</span>(packages, require, <span class="at">character.only =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="in">```</span></span>
-<span id="cb1-32"><a href="#cb1-32"></a></span>
-<span id="cb1-35"><a href="#cb1-35"></a><span class="in">```{r}</span></span>
-<span id="cb1-36"><a href="#cb1-36"></a><span class="co">#| output: false</span></span>
-<span id="cb1-37"><a href="#cb1-37"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-38"><a href="#cb1-38"></a></span>
-<span id="cb1-39"><a href="#cb1-39"></a>ds <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"msg.csv"</span>))</span>
-<span id="cb1-40"><a href="#cb1-40"></a><span class="in">```</span></span>
-<span id="cb1-41"><a href="#cb1-41"></a></span>
-<span id="cb1-44"><a href="#cb1-44"></a><span class="in">```{r}</span></span>
-<span id="cb1-45"><a href="#cb1-45"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-46"><a href="#cb1-46"></a></span>
-<span id="cb1-47"><a href="#cb1-47"></a><span class="fu">wordcloud2</span>(<span class="at">data =</span> ds, <span class="at">shape =</span> <span class="st">"cardioid"</span>)</span>
-<span id="cb1-48"><a href="#cb1-48"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb21" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1"></a><span class="co">---</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="an">title:</span><span class="co"> "DS 112. Wrangling"</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="co">---</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a></span>
+<span id="cb21-7"><a href="#cb21-7"></a><span class="in">```{r}</span></span>
+<span id="cb21-8"><a href="#cb21-8"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb21-9"><a href="#cb21-9"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb21-10"><a href="#cb21-10"></a>elections <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/election_2020_county.csv"</span>)</span>
+<span id="cb21-11"><a href="#cb21-11"></a></span>
+<span id="cb21-12"><a href="#cb21-12"></a><span class="co"># Exercise 1</span></span>
+<span id="cb21-13"><a href="#cb21-13"></a><span class="co"># Define elections_small</span></span>
+<span id="cb21-14"><a href="#cb21-14"></a>elections_small <span class="ot">&lt;-</span> elections <span class="sc">|&gt;</span></span>
+<span id="cb21-15"><a href="#cb21-15"></a>  <span class="fu">select</span>(state_name, county_name, total_votes_20, repub_pct_20, dem_pct_20, total_votes_16, dem_pct_16)</span>
+<span id="cb21-16"><a href="#cb21-16"></a></span>
+<span id="cb21-17"><a href="#cb21-17"></a><span class="co"># Check out the first 6 rows to confirm your code did what you think it did!</span></span>
+<span id="cb21-18"><a href="#cb21-18"></a><span class="fu">head</span>(elections_small)</span>
+<span id="cb21-19"><a href="#cb21-19"></a></span>
+<span id="cb21-20"><a href="#cb21-20"></a><span class="in">```</span></span>
+<span id="cb21-21"><a href="#cb21-21"></a></span>
+<span id="cb21-24"><a href="#cb21-24"></a><span class="in">```{r}</span></span>
+<span id="cb21-25"><a href="#cb21-25"></a><span class="co"># Exercise 2</span></span>
+<span id="cb21-26"><a href="#cb21-26"></a></span>
+<span id="cb21-27"><a href="#cb21-27"></a><span class="co"># Keep only data on counties in Hawaii</span></span>
+<span id="cb21-28"><a href="#cb21-28"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb21-29"><a href="#cb21-29"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Hawaii"</span>)</span>
+<span id="cb21-30"><a href="#cb21-30"></a> </span>
+<span id="cb21-31"><a href="#cb21-31"></a><span class="co"># What does this do?</span></span>
+<span id="cb21-32"><a href="#cb21-32"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb21-33"><a href="#cb21-33"></a>  <span class="fu">filter</span>(state_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Hawaii"</span>, <span class="st">"Delaware"</span>))</span>
+<span id="cb21-34"><a href="#cb21-34"></a><span class="co"># Above code gives us Hawaii and Delaware counties, a version of == but for multiple states</span></span>
+<span id="cb21-35"><a href="#cb21-35"></a></span>
+<span id="cb21-36"><a href="#cb21-36"></a><span class="co"># Keep only data on counties where the Republican got MORE THAN 93.97% of the vote in 2020</span></span>
+<span id="cb21-37"><a href="#cb21-37"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb21-38"><a href="#cb21-38"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;</span> <span class="fl">93.97</span>)</span>
+<span id="cb21-39"><a href="#cb21-39"></a><span class="co"># THINK: What variable is relevant here?</span></span>
+<span id="cb21-40"><a href="#cb21-40"></a></span>
+<span id="cb21-41"><a href="#cb21-41"></a><span class="co"># Keep only data on counties where the Republican got AT LEAST 93.97% of the vote in 2020</span></span>
+<span id="cb21-42"><a href="#cb21-42"></a>elections_small <span class="sc">|&gt;</span></span>
+<span id="cb21-43"><a href="#cb21-43"></a>  <span class="fu">filter</span>(repub_pct_20 <span class="sc">&gt;=</span> <span class="fl">93.97</span>)</span>
+<span id="cb21-44"><a href="#cb21-44"></a><span class="co"># This should have 1 more row (observation) than your answer above</span></span>
+<span id="cb21-45"><a href="#cb21-45"></a></span>
+<span id="cb21-46"><a href="#cb21-46"></a><span class="co"># Keep only data on counties in Texas where the Democrat got more than 65% of the vote in 2020</span></span>
+<span id="cb21-47"><a href="#cb21-47"></a><span class="co"># Do this 2 ways.</span></span>
+<span id="cb21-48"><a href="#cb21-48"></a><span class="co"># Method 1: 2 filters with 1 condition each</span></span>
+<span id="cb21-49"><a href="#cb21-49"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb21-50"><a href="#cb21-50"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb21-51"><a href="#cb21-51"></a>  <span class="fu">filter</span>(dem_pct_20 <span class="sc">&gt;</span> <span class="fl">65.00</span>)</span>
+<span id="cb21-52"><a href="#cb21-52"></a></span>
+<span id="cb21-53"><a href="#cb21-53"></a><span class="co"># Method 2: 1 filter with 2 conditions</span></span>
+<span id="cb21-54"><a href="#cb21-54"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb21-55"><a href="#cb21-55"></a>  <span class="fu">filter</span>(state_name <span class="sc">==</span> <span class="st">"Texas"</span>, dem_pct_20 <span class="sc">&gt;</span> <span class="fl">65.00</span>)</span>
+<span id="cb21-56"><a href="#cb21-56"></a><span class="in">```</span></span>
+<span id="cb21-57"><a href="#cb21-57"></a></span>
+<span id="cb21-60"><a href="#cb21-60"></a><span class="in">```{r}</span></span>
+<span id="cb21-61"><a href="#cb21-61"></a><span class="co"># Exercise 3</span></span>
+<span id="cb21-62"><a href="#cb21-62"></a></span>
+<span id="cb21-63"><a href="#cb21-63"></a><span class="co"># Arrange the counties in elections_small from lowest to highest percentage of 2020 Republican support</span></span>
+<span id="cb21-64"><a href="#cb21-64"></a><span class="co"># Print out just the first 6 rows</span></span>
+<span id="cb21-65"><a href="#cb21-65"></a> elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb21-66"><a href="#cb21-66"></a>   <span class="fu">arrange</span>(repub_pct_20) <span class="sc">|&gt;</span> </span>
+<span id="cb21-67"><a href="#cb21-67"></a>   <span class="fu">head</span>()</span>
+<span id="cb21-68"><a href="#cb21-68"></a> </span>
+<span id="cb21-69"><a href="#cb21-69"></a> <span class="co"># Arrange the counties in elections_small from highest to lowest percentage of 2020 Republican support</span></span>
+<span id="cb21-70"><a href="#cb21-70"></a><span class="co"># Print out just the first 6 rows</span></span>
+<span id="cb21-71"><a href="#cb21-71"></a>elections_small <span class="sc">|&gt;</span> </span>
+<span id="cb21-72"><a href="#cb21-72"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(repub_pct_20)) <span class="sc">|&gt;</span> </span>
+<span id="cb21-73"><a href="#cb21-73"></a>  <span class="fu">head</span>()</span>
+<span id="cb21-74"><a href="#cb21-74"></a></span>
+<span id="cb21-75"><a href="#cb21-75"></a></span>
+<span id="cb21-76"><a href="#cb21-76"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

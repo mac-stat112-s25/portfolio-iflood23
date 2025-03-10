@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>5&nbsp; Spatial Viz – COMP/STAT112 Notebook</title>
+<title>6&nbsp; ICA Uni Viz – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ica/IcaUniViz.html" rel="next">
-<link href="../bw/bw-quad.html" rel="prev">
+<link href="../ica/ica-bi.html" rel="next">
+<link href="../bw/bw-spatial.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-spatial.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ICA Uni Viz</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -176,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-spatial.html" class="sidebar-item-text sidebar-link active">
+  <a href="../bw/bw-spatial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span></a>
   </div>
 </li>
@@ -193,8 +193,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/IcaUniViz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IcaUniViz.html</span></span></a>
+  <a href="../ica/IcaUniViz.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ICA Uni Viz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -218,19 +218,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-wrangling.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">ica-wrangling.html</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">DS 112. Wrangling</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../ica/ica-dates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ica-dates.html</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../ica/ica-reshaping.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">ica-reshaping</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">ica-dates</span></span></a>
   </div>
 </li>
       </ul>
@@ -243,9 +237,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-spatial.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ICA Uni Viz</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span>
+<span class="chapter-number">6</span>&nbsp; <span class="chapter-title">ICA Uni Viz</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -260,9 +254,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>Use this file to generate a professional looking <strong>spatial</strong> visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</header><div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>hikes <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/high_peaks.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
@@ -276,69 +270,177 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(openintro)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: airports
-Loading required package: cherryblossom
-Loading required package: usdata</code></pre>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">head</span>(hikes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             peak elevation difficulty ascent length time    rating
+1     Mt. Marcy        5344          5   3166   14.8 10.0  moderate
+2 Algonquin Peak       5114          5   2936    9.6  9.0  moderate
+3   Mt. Haystack       4960          7   3570   17.8 12.0 difficult
+4   Mt. Skylight       4926          7   4265   17.9 15.0 difficult
+5 Whiteface Mtn.       4867          4   2535   10.4  8.5      easy
+6       Dix Mtn.       4857          5   2800   13.2 10.0  moderate</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">library</span>(RColorBrewer)</span>
-<span id="cb5-4"><a href="#cb5-4"></a></span>
-<span id="cb5-5"><a href="#cb5-5"></a>starbucks <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/starbucks.csv"</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a>states_map <span class="ot">&lt;-</span> <span class="fu">map_data</span>(<span class="st">"state"</span>)</span>
-<span id="cb5-7"><a href="#cb5-7"></a></span>
-<span id="cb5-8"><a href="#cb5-8"></a>starbucks_us_by_state <span class="ot">&lt;-</span> starbucks <span class="sc">|&gt;</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>  <span class="fu">filter</span>(Country <span class="sc">==</span> <span class="st">"US"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">count</span>(State.Province) <span class="sc">|&gt;</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>  <span class="fu">mutate</span>(<span class="at">state_name =</span> <span class="fu">str_to_lower</span>(<span class="fu">abbr2state</span>(State.Province)))</span>
-<span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a>census_pop_est_2018 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://mac-stat.github.io/data/us_census_2018_state_pop_est.csv"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>  <span class="fu">separate</span>(state, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"dot"</span>, <span class="st">"state"</span>), <span class="at">extra =</span> <span class="st">"merge"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-15"><a href="#cb5-15"></a>  <span class="fu">select</span>(<span class="sc">-</span>dot) <span class="sc">|&gt;</span></span>
-<span id="cb5-16"><a href="#cb5-16"></a>  <span class="fu">mutate</span>(<span class="at">state =</span> <span class="fu">str_to_lower</span>(state))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 51 Columns: 2
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): state
-dbl (1): est_pop_2018
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>starbucks_with_2018_pop_est <span class="ot">&lt;-</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  starbucks_us_by_state <span class="sc">|&gt;</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">left_join</span>(census_pop_est_2018,</span>
-<span id="cb7-4"><a href="#cb7-4"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"state_name"</span> <span class="ot">=</span> <span class="st">"state"</span>)</span>
-<span id="cb7-5"><a href="#cb7-5"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">mutate</span>(<span class="at">starbucks_per_10000 =</span> (n <span class="sc">/</span> est_pop_2018) <span class="sc">*</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a>starbucks_contiguous_us <span class="ot">&lt;-</span> starbucks <span class="sc">|&gt;</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">filter</span>(Country <span class="sc">==</span> <span class="st">"US"</span>, State.Province <span class="sc">!=</span> <span class="st">"AK"</span>, State.Province <span class="sc">!=</span> <span class="st">"HI"</span>)</span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-6"><a href="#cb8-6"></a><span class="fu">ggplot</span>(starbucks_with_2018_pop_est, <span class="fu">aes</span>(<span class="at">map_id =</span> state_name, <span class="at">fill =</span> starbucks_per_10000)) <span class="sc">+</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>  <span class="fu">geom_map</span>(<span class="at">map =</span> states_map) <span class="sc">+</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>    <span class="fu">geom_point</span>(</span>
-<span id="cb8-9"><a href="#cb8-9"></a>    <span class="at">data =</span> starbucks_contiguous_us,</span>
-<span id="cb8-10"><a href="#cb8-10"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Longitude , <span class="at">y =</span> Latitude), </span>
-<span id="cb8-11"><a href="#cb8-11"></a>    <span class="at">size =</span> <span class="fl">0.05</span>,</span>
-<span id="cb8-12"><a href="#cb8-12"></a>    <span class="at">alpha =</span> <span class="fl">0.2</span>,</span>
-<span id="cb8-13"><a href="#cb8-13"></a>    <span class="at">inherit.aes =</span> <span class="cn">FALSE</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>  ) <span class="sc">+</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a>  <span class="fu">expand_limits</span>(<span class="at">x =</span> states_map<span class="sc">$</span>long, <span class="at">y =</span> states_map<span class="sc">$</span>lat) <span class="sc">+</span></span>
-<span id="cb8-16"><a href="#cb8-16"></a>  <span class="fu">theme_map</span>() <span class="sc">+</span></span>
-<span id="cb8-17"><a href="#cb8-17"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"A Choroplethic Map of all Starbucks Locations in the Contiguous United States"</span>) <span class="sc">+</span></span>
-<span id="cb8-18"><a href="#cb8-18"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"Created by Izzy Flood"</span>) <span class="sc">+</span></span>
-<span id="cb8-19"><a href="#cb8-19"></a>  <span class="fu">scale_fill_viridis_c</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Use the ggplot function</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="bw-spatial_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="This map plots every Starbucks within the 48 connected US states. Additionally, the color scale indicates the number of locations per 10,000 citizens by state. Looking at the map, we can see that western states such as California, Washington, Oregon, and Colorado contain the most Starbucks per capita. " width="672"></p>
-<figcaption>A Choroplethic Map of all Starbucks Locations in the Contiguous United States</figcaption></figure>
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># We added geom_bar(), and this in turn created a bar plot</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># We added labs(x = "Rating", y = "Number of hikes"), and this in turned changed the axis labels</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># We added the (fill = "blue"), which made the color of the bars blue.</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># We added the color = "orange", and this created an orange outline of the bars.</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">geom_bar</span>(<span class="at">color =</span> <span class="st">"orange"</span>, <span class="at">fill =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-5.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># We added the theme_minimal(), and this changed the graph interface.</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_bar</span>(<span class="at">color =</span> <span class="st">"orange"</span>, <span class="at">fill =</span> <span class="st">"blue"</span>)  <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-6.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-7.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># We replaced geom_bar with  geom_histogram() and thus created a histogram</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-8.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># We added (color = "white") and as a result the elevation frequencies are outlined in white.</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-9.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># We added fill = "blue" to make the bars blue.</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"blue"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-10.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="co"># We added labs(x = "Elevation (feet)", y = "Number of hikes") to create accurate axis titles.</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-11.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># We added binwidth = 1000 to increase the width of each bar to 1000 </span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">1000</span>) <span class="sc">+</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-12.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># We decreased binwidth to 5 to decrease the width of each bar to 5</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-13.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="co"># We changed binwidth to 200</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">200</span>) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-14.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">fill =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-15.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">200</span>) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="IcaUniViz_files/figure-html/unnamed-chunk-1-16.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>
@@ -967,80 +1069,94 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../bw/bw-quad.html" class="pagination-link" aria-label="Quadvariate Viz">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quadvariate Viz</span></span>
+      <a href="../bw/bw-spatial.html" class="pagination-link" aria-label="Spatial Viz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Spatial Viz</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ica/IcaUniViz.html" class="pagination-link" aria-label="IcaUniViz.html">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">IcaUniViz.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ica/ica-bi.html" class="pagination-link" aria-label="Bivariate Viz">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">---</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="an">title:</span><span class="co"> "Spatial Viz"</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a><span class="co">---</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a></span>
-<span id="cb9-5"><a href="#cb9-5"></a>Use this file to generate a professional looking **spatial** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.</span>
-<span id="cb9-6"><a href="#cb9-6"></a></span>
-<span id="cb9-7"><a href="#cb9-7"></a></span>
-<span id="cb9-10"><a href="#cb9-10"></a><span class="in">```{r}</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb9-13"><a href="#cb9-13"></a><span class="fu">library</span>(openintro)</span>
-<span id="cb9-14"><a href="#cb9-14"></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb9-15"><a href="#cb9-15"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-16"><a href="#cb9-16"></a><span class="fu">library</span>(RColorBrewer)</span>
-<span id="cb9-17"><a href="#cb9-17"></a></span>
-<span id="cb9-18"><a href="#cb9-18"></a>starbucks <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/starbucks.csv"</span>)</span>
-<span id="cb9-19"><a href="#cb9-19"></a>states_map <span class="ot">&lt;-</span> <span class="fu">map_data</span>(<span class="st">"state"</span>)</span>
-<span id="cb9-20"><a href="#cb9-20"></a></span>
-<span id="cb9-21"><a href="#cb9-21"></a>starbucks_us_by_state <span class="ot">&lt;-</span> starbucks <span class="sc">|&gt;</span></span>
-<span id="cb9-22"><a href="#cb9-22"></a>  <span class="fu">filter</span>(Country <span class="sc">==</span> <span class="st">"US"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-23"><a href="#cb9-23"></a>  <span class="fu">count</span>(State.Province) <span class="sc">|&gt;</span></span>
-<span id="cb9-24"><a href="#cb9-24"></a>  <span class="fu">mutate</span>(<span class="at">state_name =</span> <span class="fu">str_to_lower</span>(<span class="fu">abbr2state</span>(State.Province)))</span>
-<span id="cb9-25"><a href="#cb9-25"></a></span>
-<span id="cb9-26"><a href="#cb9-26"></a>census_pop_est_2018 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://mac-stat.github.io/data/us_census_2018_state_pop_est.csv"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-27"><a href="#cb9-27"></a>  <span class="fu">separate</span>(state, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"dot"</span>, <span class="st">"state"</span>), <span class="at">extra =</span> <span class="st">"merge"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-28"><a href="#cb9-28"></a>  <span class="fu">select</span>(<span class="sc">-</span>dot) <span class="sc">|&gt;</span></span>
-<span id="cb9-29"><a href="#cb9-29"></a>  <span class="fu">mutate</span>(<span class="at">state =</span> <span class="fu">str_to_lower</span>(state))</span>
-<span id="cb9-30"><a href="#cb9-30"></a></span>
-<span id="cb9-31"><a href="#cb9-31"></a>starbucks_with_2018_pop_est <span class="ot">&lt;-</span></span>
-<span id="cb9-32"><a href="#cb9-32"></a>  starbucks_us_by_state <span class="sc">|&gt;</span></span>
-<span id="cb9-33"><a href="#cb9-33"></a>  <span class="fu">left_join</span>(census_pop_est_2018,</span>
-<span id="cb9-34"><a href="#cb9-34"></a>    <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"state_name"</span> <span class="ot">=</span> <span class="st">"state"</span>)</span>
-<span id="cb9-35"><a href="#cb9-35"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb9-36"><a href="#cb9-36"></a>  <span class="fu">mutate</span>(<span class="at">starbucks_per_10000 =</span> (n <span class="sc">/</span> est_pop_2018) <span class="sc">*</span> <span class="dv">10000</span>)</span>
-<span id="cb9-37"><a href="#cb9-37"></a></span>
-<span id="cb9-38"><a href="#cb9-38"></a></span>
-<span id="cb9-39"><a href="#cb9-39"></a></span>
-<span id="cb9-40"><a href="#cb9-40"></a><span class="in">```</span></span>
-<span id="cb9-41"><a href="#cb9-41"></a></span>
-<span id="cb9-42"><a href="#cb9-42"></a></span>
-<span id="cb9-45"><a href="#cb9-45"></a><span class="in">```{r}</span></span>
-<span id="cb9-46"><a href="#cb9-46"></a><span class="co">#| fig-cap: "A Choroplethic Map of all Starbucks Locations in the Contiguous United States"</span></span>
-<span id="cb9-47"><a href="#cb9-47"></a><span class="co">#| fig-alt: "This map plots every Starbucks within the 48 connected US states. Additionally, the color scale indicates the number of locations per 10,000 citizens by state. Looking at the map, we can see that western states such as California, Washington, Oregon, and Colorado contain the most Starbucks per capita. "</span></span>
-<span id="cb9-48"><a href="#cb9-48"></a></span>
-<span id="cb9-49"><a href="#cb9-49"></a><span class="fu">library</span>(ggthemes)</span>
-<span id="cb9-50"><a href="#cb9-50"></a></span>
-<span id="cb9-51"><a href="#cb9-51"></a>starbucks_contiguous_us <span class="ot">&lt;-</span> starbucks <span class="sc">|&gt;</span></span>
-<span id="cb9-52"><a href="#cb9-52"></a>  <span class="fu">filter</span>(Country <span class="sc">==</span> <span class="st">"US"</span>, State.Province <span class="sc">!=</span> <span class="st">"AK"</span>, State.Province <span class="sc">!=</span> <span class="st">"HI"</span>)</span>
-<span id="cb9-53"><a href="#cb9-53"></a></span>
-<span id="cb9-54"><a href="#cb9-54"></a><span class="fu">ggplot</span>(starbucks_with_2018_pop_est, <span class="fu">aes</span>(<span class="at">map_id =</span> state_name, <span class="at">fill =</span> starbucks_per_10000)) <span class="sc">+</span></span>
-<span id="cb9-55"><a href="#cb9-55"></a>  <span class="fu">geom_map</span>(<span class="at">map =</span> states_map) <span class="sc">+</span></span>
-<span id="cb9-56"><a href="#cb9-56"></a>    <span class="fu">geom_point</span>(</span>
-<span id="cb9-57"><a href="#cb9-57"></a>    <span class="at">data =</span> starbucks_contiguous_us,</span>
-<span id="cb9-58"><a href="#cb9-58"></a>    <span class="fu">aes</span>(<span class="at">x =</span> Longitude , <span class="at">y =</span> Latitude), </span>
-<span id="cb9-59"><a href="#cb9-59"></a>    <span class="at">size =</span> <span class="fl">0.05</span>,</span>
-<span id="cb9-60"><a href="#cb9-60"></a>    <span class="at">alpha =</span> <span class="fl">0.2</span>,</span>
-<span id="cb9-61"><a href="#cb9-61"></a>    <span class="at">inherit.aes =</span> <span class="cn">FALSE</span></span>
-<span id="cb9-62"><a href="#cb9-62"></a>  ) <span class="sc">+</span></span>
-<span id="cb9-63"><a href="#cb9-63"></a>  <span class="fu">expand_limits</span>(<span class="at">x =</span> states_map<span class="sc">$</span>long, <span class="at">y =</span> states_map<span class="sc">$</span>lat) <span class="sc">+</span></span>
-<span id="cb9-64"><a href="#cb9-64"></a>  <span class="fu">theme_map</span>() <span class="sc">+</span></span>
-<span id="cb9-65"><a href="#cb9-65"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"A Choroplethic Map of all Starbucks Locations in the Contiguous United States"</span>) <span class="sc">+</span></span>
-<span id="cb9-66"><a href="#cb9-66"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"Created by Izzy Flood"</span>) <span class="sc">+</span></span>
-<span id="cb9-67"><a href="#cb9-67"></a>  <span class="fu">scale_fill_viridis_c</span>()</span>
-<span id="cb9-68"><a href="#cb9-68"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb25" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1"></a><span class="co">---</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="an">title:</span><span class="co"> "ICA Uni Viz"</span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="co">---</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a></span>
+<span id="cb25-8"><a href="#cb25-8"></a><span class="in">```{r}</span></span>
+<span id="cb25-9"><a href="#cb25-9"></a>hikes <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/high_peaks.csv"</span>)</span>
+<span id="cb25-10"><a href="#cb25-10"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb25-11"><a href="#cb25-11"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb25-12"><a href="#cb25-12"></a></span>
+<span id="cb25-13"><a href="#cb25-13"></a><span class="fu">head</span>(hikes)</span>
+<span id="cb25-14"><a href="#cb25-14"></a></span>
+<span id="cb25-15"><a href="#cb25-15"></a><span class="co"># Use the ggplot function</span></span>
+<span id="cb25-16"><a href="#cb25-16"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating))</span>
+<span id="cb25-17"><a href="#cb25-17"></a></span>
+<span id="cb25-18"><a href="#cb25-18"></a><span class="co"># We added geom_bar(), and this in turn created a bar plot</span></span>
+<span id="cb25-19"><a href="#cb25-19"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb25-20"><a href="#cb25-20"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb25-21"><a href="#cb25-21"></a><span class="co"># We added labs(x = "Rating", y = "Number of hikes"), and this in turned changed the axis labels</span></span>
+<span id="cb25-22"><a href="#cb25-22"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb25-23"><a href="#cb25-23"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb25-24"><a href="#cb25-24"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-25"><a href="#cb25-25"></a><span class="co"># We added the (fill = "blue"), which made the color of the bars blue.</span></span>
+<span id="cb25-26"><a href="#cb25-26"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb25-27"><a href="#cb25-27"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb25-28"><a href="#cb25-28"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-29"><a href="#cb25-29"></a><span class="co"># We added the color = "orange", and this created an orange outline of the bars.</span></span>
+<span id="cb25-30"><a href="#cb25-30"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb25-31"><a href="#cb25-31"></a>  <span class="fu">geom_bar</span>(<span class="at">color =</span> <span class="st">"orange"</span>, <span class="at">fill =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb25-32"><a href="#cb25-32"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-33"><a href="#cb25-33"></a><span class="co"># We added the theme_minimal(), and this changed the graph interface.</span></span>
+<span id="cb25-34"><a href="#cb25-34"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> rating)) <span class="sc">+</span></span>
+<span id="cb25-35"><a href="#cb25-35"></a>  <span class="fu">geom_bar</span>(<span class="at">color =</span> <span class="st">"orange"</span>, <span class="at">fill =</span> <span class="st">"blue"</span>)  <span class="sc">+</span></span>
+<span id="cb25-36"><a href="#cb25-36"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Rating"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>) <span class="sc">+</span></span>
+<span id="cb25-37"><a href="#cb25-37"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb25-38"><a href="#cb25-38"></a></span>
+<span id="cb25-39"><a href="#cb25-39"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-40"><a href="#cb25-40"></a>  <span class="fu">geom_bar</span>()</span>
+<span id="cb25-41"><a href="#cb25-41"></a></span>
+<span id="cb25-42"><a href="#cb25-42"></a><span class="co"># We replaced geom_bar with  geom_histogram() and thus created a histogram</span></span>
+<span id="cb25-43"><a href="#cb25-43"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-44"><a href="#cb25-44"></a>  <span class="fu">geom_histogram</span>()</span>
+<span id="cb25-45"><a href="#cb25-45"></a></span>
+<span id="cb25-46"><a href="#cb25-46"></a><span class="co"># We added (color = "white") and as a result the elevation frequencies are outlined in white.</span></span>
+<span id="cb25-47"><a href="#cb25-47"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-48"><a href="#cb25-48"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>) </span>
+<span id="cb25-49"><a href="#cb25-49"></a></span>
+<span id="cb25-50"><a href="#cb25-50"></a><span class="co"># We added fill = "blue" to make the bars blue.</span></span>
+<span id="cb25-51"><a href="#cb25-51"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-52"><a href="#cb25-52"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">fill =</span> <span class="st">"blue"</span>) </span>
+<span id="cb25-53"><a href="#cb25-53"></a></span>
+<span id="cb25-54"><a href="#cb25-54"></a><span class="co"># We added labs(x = "Elevation (feet)", y = "Number of hikes") to create accurate axis titles.</span></span>
+<span id="cb25-55"><a href="#cb25-55"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-56"><a href="#cb25-56"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb25-57"><a href="#cb25-57"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-58"><a href="#cb25-58"></a></span>
+<span id="cb25-59"><a href="#cb25-59"></a><span class="co"># We added binwidth = 1000 to increase the width of each bar to 1000 </span></span>
+<span id="cb25-60"><a href="#cb25-60"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-61"><a href="#cb25-61"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">1000</span>) <span class="sc">+</span></span>
+<span id="cb25-62"><a href="#cb25-62"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-63"><a href="#cb25-63"></a></span>
+<span id="cb25-64"><a href="#cb25-64"></a><span class="co"># We decreased binwidth to 5 to decrease the width of each bar to 5</span></span>
+<span id="cb25-65"><a href="#cb25-65"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-66"><a href="#cb25-66"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb25-67"><a href="#cb25-67"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-68"><a href="#cb25-68"></a></span>
+<span id="cb25-69"><a href="#cb25-69"></a><span class="co"># We changed binwidth to 200</span></span>
+<span id="cb25-70"><a href="#cb25-70"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-71"><a href="#cb25-71"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">200</span>) <span class="sc">+</span></span>
+<span id="cb25-72"><a href="#cb25-72"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-73"><a href="#cb25-73"></a></span>
+<span id="cb25-74"><a href="#cb25-74"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-75"><a href="#cb25-75"></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">fill =</span> <span class="st">"orange"</span>)</span>
+<span id="cb25-76"><a href="#cb25-76"></a></span>
+<span id="cb25-77"><a href="#cb25-77"></a><span class="fu">ggplot</span>(hikes, <span class="fu">aes</span>(<span class="at">x =</span> elevation)) <span class="sc">+</span></span>
+<span id="cb25-78"><a href="#cb25-78"></a>  <span class="fu">geom_histogram</span>(<span class="at">color =</span> <span class="st">"white"</span>, <span class="at">binwidth =</span> <span class="dv">200</span>) <span class="sc">+</span></span>
+<span id="cb25-79"><a href="#cb25-79"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Elevation (feet)"</span>, <span class="at">y =</span> <span class="st">"Number of hikes"</span>)</span>
+<span id="cb25-80"><a href="#cb25-80"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
