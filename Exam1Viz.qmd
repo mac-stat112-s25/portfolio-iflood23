@@ -2,3 +2,88 @@
 title: "Exam1Viz"
 editor: visual
 ---
+
+```{r}
+
+library(tidytuesdayR)
+library(tidyverse)
+library(dplyr)
+
+```
+
+```{r}
+tuesdata <- tt_load('2020-02-18')
+fc <- tuesdata$food_consumption
+
+head(fc)
+str(fc)
+dim(fc)
+```
+
+```{r}
+#| fig-height: 5
+#| fig-width: 12
+
+ggplot(fc, aes(x = food_category, y = consumption)) +
+  geom_boxplot()
+
+```
+
+```{r}
+#| fig-height: 5
+#| fig-width: 20
+
+ggplot(fc, aes(x = country, y = consumption)) +
+  geom_boxplot()
+```
+
+```{r}
+#| fig-height: 10
+#| fig-width: 10
+
+
+# Grand Research Viz
+# Research Question: What does the consumption of each food group in each country look like?
+
+# plot 1
+# In this plot, I tried to produce a density plot of different levels of consumption based on food groups. A few insights can be gained from this visualization. For one, many animal products such as eggs and poultry have lower, more concentrated levels of consumption globally. Cheaper grain products have higher levels of consumption at times, but levels vary. One limitation of this visualization is that we do not have any information on individual countries.
+ggplot(fc, aes(x = consumption, fill = food_category)) +
+  geom_density(alpha = 0.8) 
+
+# plot 2
+# This plot is a more effective version of the first plot. Using a histogram, I was able to more effectively visualize the same ideas. We gain even better details in this visualization than the first. For one, we can see that it is actually dairy products that have varying levels of consumption globally. Grain products have a similar dispersal. Meat products such as fish and beef have lower levels of consumption globally, however, these levels are similar in most places.
+ggplot(fc, aes(x = consumption, fill = food_category)) +
+  geom_histogram()
+
+# plot 3
+# This plot gives us even greater insights into the variety in levels of consumption for different food groups. Confirming what we saw in the last visualization, dairy products and grain products have a higher variety in consumption levels. Additionally, poultry and pork also have relatively varying consumption levels. We still are not seeing the variety from country to country, however.
+ggplot(fc, aes(x = food_category, y = consumption, fill = food_category)) +
+  geom_boxplot()
+
+# plot 4
+# I attempted to alter the above plot by adding the country variable as a facet, but it is difficult to effectively visualize with 130 countries.
+ggplot(fc, aes(x = food_category, y = consumption, color = country)) +
+  geom_boxplot() +
+  facet_wrap(~country)
+
+# Best plot: plot 3
+
+
+```
+
+```{r}
+#| fig-cap: "Global Food Consumption By Food Type. February 18th, 2020"
+#| fig-alt: "This plot displays the variety in levels of consumption for different food groups. Foods such as dairy products and grain products have a higher variety in consumption levels. Additionally, poultry and pork also have relatively varying consumption levels. "
+
+# Final visualization
+
+ggplot(fc, aes(x = food_category, y = consumption, fill = food_category)) +
+  geom_boxplot() +
+  scale_color_viridis_d() + 
+  labs(title = "Global Food Consumption: February 18th, 2020",
+       x = "Food Type",
+       y = "Food consumption Per Capita",
+       fill = "Food Type",
+       caption = "Created by Izzy Flood") 
+  
+```
