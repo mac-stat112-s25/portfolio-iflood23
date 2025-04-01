@@ -1,0 +1,97 @@
+---
+title: "Exam2Viz"
+editor: visual
+---
+
+```{r}
+# load packages
+
+library(tidytuesdayR)
+library(tidyverse)
+library(dplyr)
+library(rnaturalearth)
+library(sf)
+
+# load data
+
+tuesdata <- tt_load('2020-02-18')
+fc <- tuesdata$food_consumption
+
+# inspect data
+
+str(fc)
+head(fc, 22)
+
+
+
+```
+
+```{r}
+#| fig-height: 10
+#| fig-width: 15
+
+# Visualization 1: What 5 countries consumed the most food?
+
+fc_total_consumption <- fc |>
+  group_by(country) |>
+  summarize(
+    total_consumption  = sum(consumption, na.rm = TRUE),
+  ) |>
+  arrange(desc(total_consumption))
+
+fc_total_consumption
+head(fc_total_consumption, 5)
+
+ggplot(fc_total_consumption, aes(x = country, y = total_consumption)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+```{r}
+#| fig-height: 10
+#| fig-width: 10
+
+# Visualization 2: Which 5 countries consumed the most of each food group?
+
+fc_total_grouped <- fc |>
+  group_by(food_category) |>
+  top_n(5, consumption) |>
+  ungroup() |>
+  arrange(food_category, country, desc(consumption))
+
+ggplot(fc_total_grouped, aes(x = country, y = consumption, fill = food_category)) +
+  geom_bar(stat = "identity") +
+  theme(axis.text.x = element_text(angle = 90))
+
+
+
+```
+
+```{r}
+# Visualization 3
+
+ne_countries(returnclass = "sf") |>
+  select(name, geometry) |>
+  mutate(name = ifelse(name == "United States of America", "USA", name)) |>
+  mutate(name = ifelse(name == "Bosnia and Herz.", "Bosnia and Herzegovina", name))|>
+  mutate(name = ifelse(name == "Czechia", "Czech Republic", name)) |>
+  mutate(name = ifelse(name == "Taiwan", "Taiwan. ROC", name)) |>
+  left_join(
+    fc |>
+      select(-co2_emmission) |>
+      group_by(food_category) |>
+      mutate(consumption = (consumption - mean(consumption))/sd(consumption)),
+    join_by(name == country)) |>
+  pivot_wider(names_from = food_category, values_from = consumption) |>
+  select(-"NA") |>
+  pivot_longer(cols = c(-name, -geometry),
+               names_to = "food_category",
+               values_to = "consumption") |>
+  ggplot() +
+  geom_sf(aes(fill = consumption)) +
+  facet_wrap(~food_category) +
+  theme(legend.position = "bottom")
+              
+
+
+```
