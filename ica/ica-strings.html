@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>2&nbsp; Bivariate Viz – COMP/STAT112 Notebook</title>
+<title>20&nbsp; Strings – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../bw/bw-tri.html" rel="next">
-<link href="../bw/bw-uni.html" rel="prev">
+<link href="../ica/DataImport.html" rel="next">
+<link href="../ica/ica-factors.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-bi.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-strings.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Strings</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -158,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../bw/bw-bi.html" class="sidebar-item-text sidebar-link active">
+  <a href="../bw/bw-bi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></span></a>
   </div>
 </li>
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-strings.html" class="sidebar-item-text sidebar-link">
+  <a href="../ica/ica-strings.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Strings</span></span></a>
   </div>
 </li>
@@ -297,9 +297,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/bw-bi.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/IcaUniViz.html">In-class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-strings.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Strings</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Bivariate Viz</span>
+<span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Strings</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -314,8 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>Use this file to generate a professional looking <strong>bivariate</strong> visualization. The visualization will not perfect the first time but you are expected to improve it throughout the semester especially after covering advanced topics such as effective viz.</p>
-<div class="cell">
+</header><div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -331,23 +330,167 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb3-2"><a href="#cb3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3"></a>elections <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/election_2020_county.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3"></a>courses <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/registrar.csv"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># Check it out</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="fu">head</span>(courses)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       number   crn                                                name  days
+1 AMST 112-01 10318         Introduction to African American Literature M W F
+2 AMST 194-01 10073              Introduction to Asian American Studies M W F
+3 AMST 194-F1 10072 What’s After White Empire - And Is It Already Here?  T R 
+4 AMST 203-01 10646 Politics and Inequality: The American Welfare State M W F
+5 AMST 205-01 10842                         Trans Theories and Politics  T R 
+6 AMST 209-01 10474                   Civil Rights in the United States   W  
+             time      room             instructor avail_max
+1 9:40 - 10:40 am  MAIN 009       Daylanne English    3 / 20
+2  1:10 - 2:10 pm MUSIC 219          Jake Nagasawa   -4 / 16
+3  3:00 - 4:30 pm   HUM 214 Karin Aguilar-San Juan    0 / 14
+4 9:40 - 10:40 am  CARN 305          Lesley Lavery    3 / 25
+5  3:00 - 4:30 pm  MAIN 009              Myrl Beam   -2 / 20
+6 7:00 - 10:00 pm  MAIN 010         Walter Greason   -1 / 15</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(elections, <span class="fu">aes</span>(<span class="at">x =</span> per_capita_income, <span class="at">y =</span> repub_pct_20)) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Per Capita Income and Republican Vote Percentages by US County: 2020 Election"</span>, <span class="at">x =</span> <span class="st">"Per Capita Income by US County in USD"</span>, <span class="at">y =</span> <span class="st">"Republican Vote Percentage in the 2020 General Election"</span>, <span class="at">caption =</span> <span class="st">"Created by Izzy Flood. </span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="st">       February 2025. Source: Github"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Exercise 1</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co"># Construct a table that indicates the number of classes offered in each day/time slot</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co"># Print only the 6 most popular time slots</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a>courses <span class="sc">|&gt;</span> </span>
+<span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">count</span>(days, time) <span class="sc">|&gt;</span> </span>
+<span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   days             time  n
+1 M W F 10:50 - 11:50 am 76
+2  T R   9:40 - 11:10 am 71
+3 M W F  9:40 - 10:40 am 68
+4 M W F   1:10 - 2:10 pm 66
+5  T R    3:00 - 4:30 pm 62
+6  T R    1:20 - 2:50 pm 59</code></pre>
 </div>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="bw-bi_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="This graph plots every US county's percentage of republican voters in the 2020 general election in comparison to per capita income. Addittionally, the graph displays a linear regression model generalized to all datapoints. Looking at the graph, we can say that there is a negative relationship between per capita income and Republican vote percentages " width="672"></p>
-<figcaption>Per Capita Income and Republican Vote Percentages by US County: 2020 Election</figcaption></figure>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co"># Exercise 2</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>courses_clean <span class="ot">&lt;-</span> courses <span class="sc">|&gt;</span> </span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">separate</span>(avail_max, <span class="fu">c</span>(<span class="st">"avail"</span>, <span class="st">"max"</span>), <span class="at">sep =</span> <span class="st">" / "</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="fu">mutate</span>(<span class="at">enroll =</span> <span class="fu">as.numeric</span>(max) <span class="sc">-</span> <span class="fu">as.numeric</span>(avail)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-6"><a href="#cb7-6"></a>  <span class="fu">separate</span>(number, <span class="fu">c</span>(<span class="st">"dept"</span>, <span class="st">"number"</span>, <span class="st">"section"</span>))</span>
+<span id="cb7-7"><a href="#cb7-7"></a>  </span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="fu">head</span>(courses_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept number section   crn                                                name
+1 AMST    112      01 10318         Introduction to African American Literature
+2 AMST    194      01 10073              Introduction to Asian American Studies
+3 AMST    194      F1 10072 What’s After White Empire - And Is It Already Here?
+4 AMST    203      01 10646 Politics and Inequality: The American Welfare State
+5 AMST    205      01 10842                         Trans Theories and Politics
+6 AMST    209      01 10474                   Civil Rights in the United States
+   days            time      room             instructor avail max enroll
+1 M W F 9:40 - 10:40 am  MAIN 009       Daylanne English     3  20     17
+2 M W F  1:10 - 2:10 pm MUSIC 219          Jake Nagasawa    -4  16     20
+3  T R   3:00 - 4:30 pm   HUM 214 Karin Aguilar-San Juan     0  14     14
+4 M W F 9:40 - 10:40 am  CARN 305          Lesley Lavery     3  25     22
+5  T R   3:00 - 4:30 pm  MAIN 009              Myrl Beam    -2  20     22
+6   W   7:00 - 10:00 pm  MAIN 010         Walter Greason    -1  15     16</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># Exercise 3</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co"># Identify the 6 departments that offered the most sections</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a>courses_clean <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>  <span class="fu">count</span>(dept) <span class="sc">|&gt;</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept  n
+1 SPAN 45
+2 BIOL 44
+3 ENVI 38
+4 PSYC 37
+5 CHEM 33
+6 COMP 31</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Identify the 6 departments with the longest average course titles</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">mutate</span>(<span class="at">length =</span> <span class="fu">str_length</span>(name)) <span class="sc">|&gt;</span> </span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">group_by</span>(dept) <span class="sc">|&gt;</span> </span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="fu">summarize</span>(<span class="at">avg_length =</span> <span class="fu">mean</span>(length)) <span class="sc">|&gt;</span> </span>
+<span id="cb11-7"><a href="#cb11-7"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_length)) <span class="sc">|&gt;</span> </span>
+<span id="cb11-8"><a href="#cb11-8"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  dept  avg_length
+  &lt;chr&gt;      &lt;dbl&gt;
+1 WGSS        46.3
+2 INTL        41.4
+3 EDUC        39.4
+4 MCST        39.4
+5 POLI        37.4
+6 AMST        37.3</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Exercise 4</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="co"># part a</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="co"># Get a subset of courses_clean that only includes courses taught by Alicia Johnson.</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a></span>
+<span id="cb13-5"><a href="#cb13-5"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb13-6"><a href="#cb13-6"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(instructor, <span class="st">"Alicia Johnson"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept number section   crn                         name  days            time
+1 STAT    253      01 10806 Statistical Machine Learning  T R  9:40 - 11:10 am
+2 STAT    253      02 10807 Statistical Machine Learning  T R   1:20 - 2:50 pm
+3 STAT    253      03 10808 Statistical Machine Learning  T R   3:00 - 4:30 pm
+        room     instructor avail max enroll
+1 THEATR 206 Alicia Johnson    -3  20     23
+2 THEATR 206 Alicia Johnson    -3  20     23
+3 THEATR 206 Alicia Johnson     2  20     18</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># part b</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="co"># Create a new dataset from courses_clean, named stat, that only includes STAT sections </span></span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a>stat <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb15-5"><a href="#cb15-5"></a>  <span class="fu">filter</span>(dept <span class="sc">==</span> <span class="st">"STAT"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb15-6"><a href="#cb15-6"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Introduction to "</span>, <span class="st">""</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Statistical"</span>, <span class="st">"Stat"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb15-8"><a href="#cb15-8"></a>  <span class="fu">mutate</span>(<span class="at">start_time =</span> <span class="fu">str_sub</span>(time, <span class="dv">1</span>, <span class="dv">5</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb15-9"><a href="#cb15-9"></a>  <span class="fu">select</span>(number, name, start_time, enroll)</span>
+<span id="cb15-10"><a href="#cb15-10"></a>  <span class="fu">dim</span>(stat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 19  4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Exercise 5</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3"></a>enrollments <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="fu">filter</span>(dept <span class="sc">!=</span> <span class="st">"PE"</span>, dept <span class="sc">!=</span> <span class="st">"INTD"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"MUSI"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb17-6"><a href="#cb17-6"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"THDA"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb17-7"><a href="#cb17-7"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(section, <span class="st">"L"</span>))</span>
+<span id="cb17-8"><a href="#cb17-8"></a>  </span>
+<span id="cb17-9"><a href="#cb17-9"></a><span class="fu">head</span>(enrollments)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept number section   crn                                                name
+1 AMST    112      01 10318         Introduction to African American Literature
+2 AMST    194      01 10073              Introduction to Asian American Studies
+3 AMST    194      F1 10072 What’s After White Empire - And Is It Already Here?
+4 AMST    203      01 10646 Politics and Inequality: The American Welfare State
+5 AMST    205      01 10842                         Trans Theories and Politics
+6 AMST    209      01 10474                   Civil Rights in the United States
+   days            time      room             instructor avail max enroll
+1 M W F 9:40 - 10:40 am  MAIN 009       Daylanne English     3  20     17
+2 M W F  1:10 - 2:10 pm MUSIC 219          Jake Nagasawa    -4  16     20
+3  T R   3:00 - 4:30 pm   HUM 214 Karin Aguilar-San Juan     0  14     14
+4 M W F 9:40 - 10:40 am  CARN 305          Lesley Lavery     3  25     22
+5  T R   3:00 - 4:30 pm  MAIN 009              Myrl Beam    -2  20     22
+6   W   7:00 - 10:00 pm  MAIN 010         Walter Greason    -1  15     16</code></pre>
 </div>
 </div>
 
@@ -975,43 +1118,114 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../bw/bw-uni.html" class="pagination-link" aria-label="Univariate Viz">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Univariate Viz</span></span>
+      <a href="../ica/ica-factors.html" class="pagination-link" aria-label="ica-factors">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">ica-factors</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../bw/bw-tri.html" class="pagination-link" aria-label="Trivariate Viz">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trivariate Viz</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ica/DataImport.html" class="pagination-link" aria-label="Data Import">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Data Import</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> "Bivariate Viz"</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="co">---</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a></span>
-<span id="cb6-5"><a href="#cb6-5"></a>Use this file to generate a professional looking **bivariate** visualization.  The visualization will not perfect the first time but you are expected to improve it throughout the semester especially after covering advanced topics such as effective viz.</span>
-<span id="cb6-6"><a href="#cb6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7"></a></span>
-<span id="cb6-10"><a href="#cb6-10"></a><span class="in">```{r}</span></span>
-<span id="cb6-11"><a href="#cb6-11"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb6-12"><a href="#cb6-12"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb6-13"><a href="#cb6-13"></a></span>
-<span id="cb6-14"><a href="#cb6-14"></a>elections <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/election_2020_county.csv"</span>)</span>
-<span id="cb6-15"><a href="#cb6-15"></a><span class="in">```</span></span>
-<span id="cb6-16"><a href="#cb6-16"></a></span>
-<span id="cb6-17"><a href="#cb6-17"></a></span>
-<span id="cb6-20"><a href="#cb6-20"></a><span class="in">```{r}</span></span>
-<span id="cb6-21"><a href="#cb6-21"></a><span class="co">#| fig-cap: "Per Capita Income and Republican Vote Percentages by US County: 2020 Election"</span></span>
-<span id="cb6-22"><a href="#cb6-22"></a><span class="co">#| fig-alt: "This graph plots every US county's percentage of republican voters in the 2020 general election in comparison to per capita income. Addittionally, the graph displays a linear regression model generalized to all datapoints. Looking at the graph, we can say that there is a negative relationship between per capita income and Republican vote percentages "</span></span>
-<span id="cb6-23"><a href="#cb6-23"></a></span>
-<span id="cb6-24"><a href="#cb6-24"></a><span class="fu">ggplot</span>(elections, <span class="fu">aes</span>(<span class="at">x =</span> per_capita_income, <span class="at">y =</span> repub_pct_20)) <span class="sc">+</span></span>
-<span id="cb6-25"><a href="#cb6-25"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb6-26"><a href="#cb6-26"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
-<span id="cb6-27"><a href="#cb6-27"></a>  <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span></span>
-<span id="cb6-28"><a href="#cb6-28"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Per Capita Income and Republican Vote Percentages by US County: 2020 Election"</span>, <span class="at">x =</span> <span class="st">"Per Capita Income by US County in USD"</span>, <span class="at">y =</span> <span class="st">"Republican Vote Percentage in the 2020 General Election"</span>, <span class="at">caption =</span> <span class="st">"Created by Izzy Flood. </span></span>
-<span id="cb6-29"><a href="#cb6-29"></a><span class="st">       February 2025. Source: Github"</span>)</span>
-<span id="cb6-30"><a href="#cb6-30"></a></span>
-<span id="cb6-31"><a href="#cb6-31"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb19" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1"></a><span class="co">---</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="an">title:</span><span class="co"> "Strings"</span></span>
+<span id="cb19-3"><a href="#cb19-3"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a><span class="co">---</span></span>
+<span id="cb19-5"><a href="#cb19-5"></a></span>
+<span id="cb19-8"><a href="#cb19-8"></a><span class="in">```{r}</span></span>
+<span id="cb19-9"><a href="#cb19-9"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb19-10"><a href="#cb19-10"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb19-11"><a href="#cb19-11"></a></span>
+<span id="cb19-12"><a href="#cb19-12"></a>courses <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/registrar.csv"</span>)</span>
+<span id="cb19-13"><a href="#cb19-13"></a></span>
+<span id="cb19-14"><a href="#cb19-14"></a><span class="co"># Check it out</span></span>
+<span id="cb19-15"><a href="#cb19-15"></a><span class="fu">head</span>(courses)</span>
+<span id="cb19-16"><a href="#cb19-16"></a><span class="in">```</span></span>
+<span id="cb19-17"><a href="#cb19-17"></a></span>
+<span id="cb19-20"><a href="#cb19-20"></a><span class="in">```{r}</span></span>
+<span id="cb19-21"><a href="#cb19-21"></a><span class="co"># Exercise 1</span></span>
+<span id="cb19-22"><a href="#cb19-22"></a></span>
+<span id="cb19-23"><a href="#cb19-23"></a><span class="co"># Construct a table that indicates the number of classes offered in each day/time slot</span></span>
+<span id="cb19-24"><a href="#cb19-24"></a><span class="co"># Print only the 6 most popular time slots</span></span>
+<span id="cb19-25"><a href="#cb19-25"></a></span>
+<span id="cb19-26"><a href="#cb19-26"></a>courses <span class="sc">|&gt;</span> </span>
+<span id="cb19-27"><a href="#cb19-27"></a>  <span class="fu">count</span>(days, time) <span class="sc">|&gt;</span> </span>
+<span id="cb19-28"><a href="#cb19-28"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-29"><a href="#cb19-29"></a>  <span class="fu">head</span>()</span>
+<span id="cb19-30"><a href="#cb19-30"></a></span>
+<span id="cb19-31"><a href="#cb19-31"></a></span>
+<span id="cb19-32"><a href="#cb19-32"></a></span>
+<span id="cb19-33"><a href="#cb19-33"></a><span class="in">```</span></span>
+<span id="cb19-34"><a href="#cb19-34"></a></span>
+<span id="cb19-37"><a href="#cb19-37"></a><span class="in">```{r}</span></span>
+<span id="cb19-38"><a href="#cb19-38"></a><span class="co"># Exercise 2</span></span>
+<span id="cb19-39"><a href="#cb19-39"></a></span>
+<span id="cb19-40"><a href="#cb19-40"></a>courses_clean <span class="ot">&lt;-</span> courses <span class="sc">|&gt;</span> </span>
+<span id="cb19-41"><a href="#cb19-41"></a>  <span class="fu">separate</span>(avail_max, <span class="fu">c</span>(<span class="st">"avail"</span>, <span class="st">"max"</span>), <span class="at">sep =</span> <span class="st">" / "</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-42"><a href="#cb19-42"></a>  <span class="fu">mutate</span>(<span class="at">enroll =</span> <span class="fu">as.numeric</span>(max) <span class="sc">-</span> <span class="fu">as.numeric</span>(avail)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-43"><a href="#cb19-43"></a>  <span class="fu">separate</span>(number, <span class="fu">c</span>(<span class="st">"dept"</span>, <span class="st">"number"</span>, <span class="st">"section"</span>))</span>
+<span id="cb19-44"><a href="#cb19-44"></a>  </span>
+<span id="cb19-45"><a href="#cb19-45"></a><span class="fu">head</span>(courses_clean)</span>
+<span id="cb19-46"><a href="#cb19-46"></a><span class="in">```</span></span>
+<span id="cb19-47"><a href="#cb19-47"></a></span>
+<span id="cb19-50"><a href="#cb19-50"></a><span class="in">```{r}</span></span>
+<span id="cb19-51"><a href="#cb19-51"></a><span class="co"># Exercise 3</span></span>
+<span id="cb19-52"><a href="#cb19-52"></a></span>
+<span id="cb19-53"><a href="#cb19-53"></a><span class="co"># Identify the 6 departments that offered the most sections</span></span>
+<span id="cb19-54"><a href="#cb19-54"></a></span>
+<span id="cb19-55"><a href="#cb19-55"></a>courses_clean <span class="sc">|&gt;</span></span>
+<span id="cb19-56"><a href="#cb19-56"></a>  <span class="fu">count</span>(dept) <span class="sc">|&gt;</span></span>
+<span id="cb19-57"><a href="#cb19-57"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span></span>
+<span id="cb19-58"><a href="#cb19-58"></a>  <span class="fu">head</span>()</span>
+<span id="cb19-59"><a href="#cb19-59"></a></span>
+<span id="cb19-60"><a href="#cb19-60"></a><span class="co"># Identify the 6 departments with the longest average course titles</span></span>
+<span id="cb19-61"><a href="#cb19-61"></a></span>
+<span id="cb19-62"><a href="#cb19-62"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb19-63"><a href="#cb19-63"></a>  <span class="fu">mutate</span>(<span class="at">length =</span> <span class="fu">str_length</span>(name)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-64"><a href="#cb19-64"></a>  <span class="fu">group_by</span>(dept) <span class="sc">|&gt;</span> </span>
+<span id="cb19-65"><a href="#cb19-65"></a>  <span class="fu">summarize</span>(<span class="at">avg_length =</span> <span class="fu">mean</span>(length)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-66"><a href="#cb19-66"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_length)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-67"><a href="#cb19-67"></a>  <span class="fu">head</span>()</span>
+<span id="cb19-68"><a href="#cb19-68"></a>  </span>
+<span id="cb19-69"><a href="#cb19-69"></a><span class="in">```</span></span>
+<span id="cb19-70"><a href="#cb19-70"></a></span>
+<span id="cb19-73"><a href="#cb19-73"></a><span class="in">```{r}</span></span>
+<span id="cb19-74"><a href="#cb19-74"></a><span class="co"># Exercise 4</span></span>
+<span id="cb19-75"><a href="#cb19-75"></a><span class="co"># part a</span></span>
+<span id="cb19-76"><a href="#cb19-76"></a><span class="co"># Get a subset of courses_clean that only includes courses taught by Alicia Johnson.</span></span>
+<span id="cb19-77"><a href="#cb19-77"></a></span>
+<span id="cb19-78"><a href="#cb19-78"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb19-79"><a href="#cb19-79"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(instructor, <span class="st">"Alicia Johnson"</span>)) </span>
+<span id="cb19-80"><a href="#cb19-80"></a></span>
+<span id="cb19-81"><a href="#cb19-81"></a><span class="co"># part b</span></span>
+<span id="cb19-82"><a href="#cb19-82"></a><span class="co"># Create a new dataset from courses_clean, named stat, that only includes STAT sections </span></span>
+<span id="cb19-83"><a href="#cb19-83"></a></span>
+<span id="cb19-84"><a href="#cb19-84"></a>stat <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb19-85"><a href="#cb19-85"></a>  <span class="fu">filter</span>(dept <span class="sc">==</span> <span class="st">"STAT"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-86"><a href="#cb19-86"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Introduction to "</span>, <span class="st">""</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb19-87"><a href="#cb19-87"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Statistical"</span>, <span class="st">"Stat"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-88"><a href="#cb19-88"></a>  <span class="fu">mutate</span>(<span class="at">start_time =</span> <span class="fu">str_sub</span>(time, <span class="dv">1</span>, <span class="dv">5</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-89"><a href="#cb19-89"></a>  <span class="fu">select</span>(number, name, start_time, enroll)</span>
+<span id="cb19-90"><a href="#cb19-90"></a>  <span class="fu">dim</span>(stat)</span>
+<span id="cb19-91"><a href="#cb19-91"></a></span>
+<span id="cb19-92"><a href="#cb19-92"></a></span>
+<span id="cb19-93"><a href="#cb19-93"></a><span class="in">```</span></span>
+<span id="cb19-94"><a href="#cb19-94"></a></span>
+<span id="cb19-97"><a href="#cb19-97"></a><span class="in">```{r}</span></span>
+<span id="cb19-98"><a href="#cb19-98"></a><span class="co"># Exercise 5</span></span>
+<span id="cb19-99"><a href="#cb19-99"></a></span>
+<span id="cb19-100"><a href="#cb19-100"></a>enrollments <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb19-101"><a href="#cb19-101"></a>  <span class="fu">filter</span>(dept <span class="sc">!=</span> <span class="st">"PE"</span>, dept <span class="sc">!=</span> <span class="st">"INTD"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-102"><a href="#cb19-102"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"MUSI"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-103"><a href="#cb19-103"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"THDA"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-104"><a href="#cb19-104"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(section, <span class="st">"L"</span>))</span>
+<span id="cb19-105"><a href="#cb19-105"></a>  </span>
+<span id="cb19-106"><a href="#cb19-106"></a><span class="fu">head</span>(enrollments)</span>
+<span id="cb19-107"><a href="#cb19-107"></a><span class="in">```</span></span>
+<span id="cb19-108"><a href="#cb19-108"></a></span>
+<span id="cb19-111"><a href="#cb19-111"></a><span class="in">```{r}</span></span>
+<span id="cb19-112"><a href="#cb19-112"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
